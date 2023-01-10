@@ -4,10 +4,15 @@
 function getComputerChoice(){    
     //create variable which stores random number between 0-2
     let random_num = Math.floor(Math.random()*3);
-    console.log(random_num)
-    //if 0 return Rock
-    //if 1 return Paper
-    //if 2 return Scissors
+    //if random_num = 0 return Rock
+    if (random_num=0) {
+        return ("Rock");
+    
+    //else if random_num = 1 return Paper
+    } else if (random_num=1){
+        return ("Paper");
+    //else if random_num = 2 return Scissors
+    } else if (random_num=2){
+        return ("Scissors");
+    }
 }
-
-getComputerChoice()
