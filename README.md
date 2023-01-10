@@ -1,0 +1,1 @@
+This project should help me understand JS with the game "Tic Tac Toe"
