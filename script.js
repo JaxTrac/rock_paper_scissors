@@ -65,6 +65,12 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+// create game function
+    //aks for how many rounds
+    //saves in variable
+    //aks player for every round which choice
+    //returns winner
+
 playRound("Rock", getComputerChoice());
 playRound("Scissors", getComputerChoice());
 playRound("Paper", getComputerChoice());
