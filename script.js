@@ -24,16 +24,24 @@ function playRound(playerSelection, computerSelection){
     //lowercase user input
     lowerPlayerSelection = playerSelection.toLowerCase();
     lowerComputerSelection = computerSelection.toLowerCase();
+    inputLength = (lowerComputerSelection+lowerPlayerSelection).length;
     // inputs the same -> draw
     if (lowerPlayerSelection==lowerComputerSelection){
         console.log("Draw!");
+
     }
-    
     // rock vs paper -> paper wins
+    else if (inputLength==9){
+        if (lowerPlayerSelection=="paper"){
+            console.log("Paper vs Rock! Paper wins!")
+        } else {
+            console.log("Rock vs Paper! You loooooose!")
+        }
+    }
     
     // rock vs scissors -> rock wins
     
     // scissors vs paper -> scissors wins
 }
 
-playRound("scissors", getComputerChoice())
+playRound("Rock", getComputerChoice())
