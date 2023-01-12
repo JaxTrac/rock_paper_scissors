@@ -66,11 +66,19 @@ function playRound(playerSelection, computerSelection){
 }
 
 // create game function
-    //aks for how many rounds
-    //saves in variable
+function game(){
+    let score=0
+    //aks for how many rounds & save in variable
+    let rounds = parseInt(prompt("How many rounds do you want to play?"));
     //aks player for every round which choice
+    while (rounds > 0){
+        let choice = prompt("Rock, Paper, Scissors?")
+        score += playRound(choice, getComputerChoice())
+        rounds -= 1
+        console.log(rounds)
+    }
     //returns winner
+    console.log(score)
+}
 
-playRound("Rock", getComputerChoice());
-playRound("Scissors", getComputerChoice());
-playRound("Paper", getComputerChoice());
+game()
