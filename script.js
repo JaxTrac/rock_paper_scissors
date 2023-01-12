@@ -40,8 +40,24 @@ function playRound(playerSelection, computerSelection){
     }
     
     // rock vs scissors -> rock wins
+    else if (inputLength==12){
+        if (lowerPlayerSelection=="rock"){
+            console.log("Rock vs Scissors! Rock wins!")
+        } else {
+            console.log("Scissors vs Rock! You loooooose!")
+        }
+    }
     
     // scissors vs paper -> scissors wins
+    else if (inputLength==13){
+        if (lowerPlayerSelection=="scissors"){
+            console.log("Scissors vs Paper! Scissors wins!")
+        } else {
+            console.log("Paper vs Scissors! You loooooose!")
+        }
+    }
 }
 
-playRound("Rock", getComputerChoice())
+playRound("Rock", getComputerChoice());
+playRound("Scissors", getComputerChoice());
+playRound("Paper", getComputerChoice());
