@@ -28,14 +28,17 @@ function playRound(playerSelection, computerSelection){
     // inputs the same -> draw
     if (lowerPlayerSelection==lowerComputerSelection){
         console.log("Draw!");
-
+        return 0
     }
     // rock vs paper -> paper wins
     else if (inputLength==9){
         if (lowerPlayerSelection=="paper"){
             console.log("Paper vs Rock! Paper wins!")
+            return 1
         } else {
             console.log("Rock vs Paper! You loooooose!")
+            return -1
+
         }
     }
     
@@ -43,8 +46,10 @@ function playRound(playerSelection, computerSelection){
     else if (inputLength==12){
         if (lowerPlayerSelection=="rock"){
             console.log("Rock vs Scissors! Rock wins!")
+            return 1
         } else {
             console.log("Scissors vs Rock! You loooooose!")
+            return -1
         }
     }
     
@@ -52,8 +57,10 @@ function playRound(playerSelection, computerSelection){
     else if (inputLength==13){
         if (lowerPlayerSelection=="scissors"){
             console.log("Scissors vs Paper! Scissors wins!")
+            return 1
         } else {
             console.log("Paper vs Scissors! You loooooose!")
+            return -1
         }
     }
 }
